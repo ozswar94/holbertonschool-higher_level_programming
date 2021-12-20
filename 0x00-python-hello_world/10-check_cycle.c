@@ -1,20 +1,26 @@
 #include <stdio.h>
 #include "lists.h"
 
+/**
+* check_cycle - mock interview
+* @list: list
+*
+* Return: 1 if cycle else 0
+*/
 int check_cycle(listint_t *list)
 {
-	listint_t **tmp;
+	listint_t *tmp;
 
 	if (list == NULL)
 		return (0);
 
-	tmp = &list;
-	while ((*tmp)->next != NULL)
+	tmp = list->next;
+	while (tmp != NULL)
 	{
-		if (&list == tmp)
+		if (list == tmp)
 			return (1);
-		*tmp = (*tmp)->next;
-		printf("%d\n", (*tmp)->n);
+
+		tmp = tmp->next;
 	}
 	return (0);
 }
