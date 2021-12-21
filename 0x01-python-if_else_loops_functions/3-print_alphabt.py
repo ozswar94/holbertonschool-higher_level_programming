@@ -6,4 +6,4 @@ for i in range(97, 123):
     elif i == 113:
         i += 1
     else:
-        print(chr(i), end='')
+        print("{:c}".format(i), end='')
