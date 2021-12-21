@@ -1,11 +1,12 @@
 #!/usr/bin/python3
 import random
 number = random.randint(-10000, 10000)
-# YOUR CODE HERE
+
 print("Last digit of {:d} is".format(number), end=" ")
 
 if number < 0:
-    number %= (-10)
+    number = abs(number) % 10
+    number *= -1
 else:
     number %= 10
 
