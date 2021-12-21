@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
-for i in range(26):
-    if ord('a') + i == ord('e'):
+for i in range(97, 123):
+    if i == 101:
         i += 1
-    elif ord('a') + i == ord('q'):
+    elif i == 113:
         i += 1
     else:
-        print(chr(ord('a') + i), end='')
+        print(chr(i), end='')
