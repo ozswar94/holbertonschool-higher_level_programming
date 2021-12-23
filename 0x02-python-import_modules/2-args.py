@@ -7,6 +7,8 @@ if __name__ == "__main__":
 
     if nb_argv == 2:
         print("1 argument:")
+    elif nb_argv == 1:
+        print("0 arguments.")
     else:
         print("{:d} arguments:".format(nb_argv - 1))
 
