@@ -2,6 +2,7 @@
 
 import hidden_4
 
-for mod in dir(hidden_4):
-    if "__" not in mod:
-        print("{:s}".format(mod))
+if __name__ == "__main__":
+    for mod in dir(hidden_4):
+        if "__" not in mod:
+            print("{:s}".format(mod))
