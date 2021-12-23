@@ -2,9 +2,10 @@
 
 import sys
 
-nb = 0
+if __name__ == "__main__":
+    nb = 0
 
-for i in range(1, len(sys.argv)):
-    nb += int(sys.argv[i])
+    for i in range(1, len(sys.argv)):
+        nb += int(sys.argv[i])
 
-print("{:d}".format(nb))
+    print("{:d}".format(nb))
