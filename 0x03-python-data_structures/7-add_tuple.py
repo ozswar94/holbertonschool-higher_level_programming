@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
     size_tuple_a = len(tuple_a)
     size_tuple_b = len(tuple_b)
