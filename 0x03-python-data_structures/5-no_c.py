@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def no_c(my_string):
     if not my_string:
-        return
+        return my_string
     my_string = list(my_string)
     for c in my_string:
         if c in 'cC':
