@@ -11,7 +11,13 @@ class Square:
         size (int): size of the square, private attribute
     """
     def __init__(self, size=0):
-            self.size = size
+        """
+            the __init__ method
+
+            Args:
+                size (int): set size in constructor
+        """
+        self.size = size
 
     @property
     def size(self):
@@ -26,12 +32,16 @@ class Square:
         else:
             self.__size = value
 
+    """ area return area of square """
     def area(self):
         return self.__size * self.__size
 
+    """ my_print method print square with # """
     def my_print(self):
+        if self.__size == 0:
+            print()
+            return
         for i in range(self.__size):
             for j in range(self.__size):
                 print("#", end="")
             print()
-
