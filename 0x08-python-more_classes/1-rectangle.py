@@ -11,9 +11,12 @@ class Rectangle:
     Attributes:
         width (int): An integer which is >= 0,
         define the width of the Rectangle
-
         height (int): An integer which is >= 0,
         define the height of the Rectangle
+
+    Raises:
+        TypeError: If given value is not an int.
+        ValueError: If given value is < 0.
     """
 
     def __init__(self, width=0, height=0):
