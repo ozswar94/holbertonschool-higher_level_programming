@@ -53,19 +53,21 @@ class Rectangle:
         else:
             self.__height = value
 
-    """ return area of rectange """
     def area(self):
+        """ return area of rectange """
         return self.__width * self.__height
 
-    """ return perimeter of rectangle """
     def perimeter(self):
+        """ return perimeter of rectangle """
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width + self.__height) * 2
 
-    """ return the string rectangle with the char = '#' """
     def __str__(self):
+        """ return the string rectangle with the char = '#' """
         rect = ""
+        if self.height == 0 or self.width == 0:
+            return ""
         for i in range(self.__height):
             for j in range(self.width):
                 rect += '#'
