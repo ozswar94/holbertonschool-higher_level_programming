@@ -94,8 +94,7 @@ class Rectangle:
     """ Rectangle to Square """
     @classmethod
     def square(cls, size=0):
-        cls = Rectangle(size, size)
-        return cls
+        return cls(size, size)
 
     """ return the string rectangle with the char = '#' """
     def __str__(self):
