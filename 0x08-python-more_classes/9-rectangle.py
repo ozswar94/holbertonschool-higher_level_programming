@@ -32,8 +32,8 @@ class Rectangle:
             width (int): set width in constructor
             height (int): set height in constructor
         """
-        self.height = height
         self.width = width
+        self.height = height
         type(self).number_of_instances += 1
 
     @staticmethod
