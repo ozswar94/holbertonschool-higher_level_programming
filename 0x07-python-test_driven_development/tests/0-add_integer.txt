@@ -1,0 +1,43 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(-2, 0)
+-2
+
+>>> add_integer(-18, -23)
+-41
+
+>>> add_integer(0.222222, 23)
+23
+
+>>> add_integer("Wesh", 23)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(int("Wesh"), 23)
+Traceback (most recent call last):
+ValueError: invalid literal for int() with base 10: 'Wesh'
+
+>>> add_integer(float("Wesh"), 23)
+Traceback (most recent call last):
+ValueError: could not convert string to float: 'Wesh'
+
+>>> add_integer(23)
+121
+
+>>> add_integer(24)
+122
+
+>>> add_integer(flot(None))
+Traceback (most recent call last):
+NameError: name 'flot' is not defined
+
+>>> add_integer(float(None))
+Traceback (most recent call last):
+TypeError: float() argument must be a string or a number, not 'NoneType'
+
+>>> add_integer("Holberton")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(-98)
+0
