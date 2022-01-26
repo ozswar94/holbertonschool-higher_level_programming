@@ -41,3 +41,39 @@ TypeError: a must be an integer
 
 >>> add_integer(-98)
 0
+
+>>> add_integer(float(NaN))
+Traceback (most recent call last):
+NameError: name 'NaN' is not defined
+
+>>> add_integer(int(float(NaN)))
+Traceback (most recent call last):
+NameError: name 'NaN' is not defined
+
+>>> add_integer(int(float(int)))
+Traceback (most recent call last):
+TypeError: float() argument must be a string or a number, not 'type'
+
+>>> add_integer(int(float('inf')))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(int('inf'))
+Traceback (most recent call last):
+ValueError: invalid literal for int() with base 10: 'inf'
+
+>>> add_integer(float('inf'), -float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(-float('inf'), -float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
+
+>>> add_integer(-float('inf'), float('inf'))
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer
