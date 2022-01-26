@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+""" matrix_divided """
+
+
 def matrix_divided(matrix, div):
-    """ return a + b
+    """ return matrix div
 
     Args:
         matrix (list): list of list
