@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-""" Class BaseGeometry """
+""" Implementing a Geometry class """
 
 
 class BaseGeometry:
-    """ a class with area and integer validor """
+    """A class BaseGeometry with instance methods area and integer_validator"""
     def area(self):
         """  Area """
         raise Exception("area() is not implemented")
