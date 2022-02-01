@@ -19,10 +19,11 @@ class Student:
 
     def to_json(self, attrs=None):
         """return class in format dictionary"""
-        if not attrs:
+        try:
+            dict_json = {}
+            for ele in attrs:
+                if ele in self.__dict__:
+                    dict_json[ele] = self.__dict__[ele]
+            return dict_json
+        except TypeError:
             return self.__dict__
-        dict_json = {}
-        for ele in attrs:
-            if ele in self.__dict__:
-                dict_json[ele] = self.__dict__[ele]
-        return dict_json
