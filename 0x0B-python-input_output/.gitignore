@@ -1,5 +1,5 @@
 # main file
-*main.py
+*main*
 
 # python cache
 __*__/
@@ -9,3 +9,8 @@ __*__/
 
 # json file
 *.json
+
+# class file
+*my_class*
+
+
