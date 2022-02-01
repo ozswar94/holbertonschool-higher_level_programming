@@ -1,11 +1,5 @@
 #!/usr/bin/python3
-
-
-"""
-update a json file
-"""
-
-
+""" add item """
 import sys
 
 
@@ -18,7 +12,7 @@ try:
 except FileNotFoundError:
     obj = []
 
-if sys.argc > 1:
+if len(sys.argv) > 1:
     for i in range(1, sys.argc):
         obj.append(argv[i])
 
