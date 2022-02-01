@@ -14,7 +14,7 @@ try:
 except FileNotFoundError:
     obj = []
 
-if argc > 1:
+if sys.argc > 1:
     for i in range(1, sys.argc):
         obj.append(argv[i])
     save_to_json_file(obj, "add_item.json")
