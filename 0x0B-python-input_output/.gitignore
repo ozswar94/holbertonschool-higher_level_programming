@@ -6,3 +6,6 @@ __*__/
 
 # txt file
 *.txt
+
+# json file
+*.json
