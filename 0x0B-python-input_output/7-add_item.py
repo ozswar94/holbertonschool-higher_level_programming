@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" add item """
+
+
+"""
+update a json file
+"""
 
 
 import sys
@@ -17,4 +21,5 @@ except FileNotFoundError:
 if sys.argc > 1:
     for i in range(1, sys.argc):
         obj.append(argv[i])
-    save_to_json_file(obj, "add_item.json")
+
+save_to_json_file(obj, "add_item.json")
