@@ -195,7 +195,7 @@ class TestSquareUpdateAttribute(unittest.TestCase):
         """Tests to update with *args attributes"""
         Base._Base__nb_objects = 0
         s1 = Square(5)
-        self.assertEqual("[Square] (1) 0/0 - 5", str(s1))
+        self.assertEqual("[Square] (23) 0/0 - 5", str(s1))
         s1.update(10)
         self.assertEqual(s1.id, 10)
         self.assertEqual("[Square] (10) 0/0 - 5", str(s1))
@@ -308,7 +308,7 @@ class TestSquareToDictionary(unittest.TestCase):
         Base._Base__nb_objects = 0
         s1 = Square(10, 2, 1)
         s1_dictionary = s1.to_dictionary()
-        self.assertEqual(s1_dictionary, {'id': 1, 'x': 2, 'size': 10, 'y': 1})
+        self.assertEqual(s1_dictionary, {'id': 22, 'x': 2, 'size': 10, 'y': 1})
         self.assertEqual(type(s1_dictionary), dict)
 
     def test_dictionary_compare(self):

@@ -101,7 +101,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """ str representation """
-        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id,
             self.__x,
             self.__y,
