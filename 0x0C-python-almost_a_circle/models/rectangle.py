@@ -84,9 +84,14 @@ class Rectangle(Base):
 
     def display(self):
         """ display rectangle with char # """
-        print('\n' * self.__y, end='')
+        for i in range(self.__y):
+            print()
         for i in range(self.__height):
-            print(' ' * self.__x + '#' * self.__width)
+            for j in range(self.__x):
+                print(" ", end="")
+            for j in range(self.__width):
+                print("#", end="")
+            print()
 
     def update(self, *args, **kwargs):
         """ update the class """
