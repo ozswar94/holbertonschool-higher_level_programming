@@ -53,14 +53,10 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        filename = cls.__name__ + ".json"
-        with open(filename, "r") as curr_file:
-            content = curr_file.read()
-        if not (content or len(content)):
+        filename = "{}.json".format(cls.__name__)
+        try:
+            with open(filename, "r") as file:
+                list_dicts = Base.from_json_string(file.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
             return []
-        data = []
-        data = cls.from_json_string(content)
-        list_objs = []
-        for item in data:
-            list_objs.append(cls.create(**item))
-        return list_objs
