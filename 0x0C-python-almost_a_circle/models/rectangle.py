@@ -84,14 +84,9 @@ class Rectangle(Base):
 
     def display(self):
         """ display rectangle with char # """
-        for i in range(self.__y):
-            print()
+        print('\n' * self.__y, end='')
         for i in range(self.__height):
-            for j in range(self.__x):
-                print(" ", end="")
-            for j in range(self.__width):
-                print("#", end="")
-            print()
+            print(' ' * self.__x + '#' * self.__width)
 
     def update(self, *args, **kwargs):
         """ update the class """
@@ -106,7 +101,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """ str representation """
-        return "[Rectange] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
+        return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id,
             self.__x,
             self.__y,
