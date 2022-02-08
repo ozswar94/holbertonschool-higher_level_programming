@@ -165,6 +165,10 @@ class TestValidationAttributeHeight(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "height must be > 0"):
             Rectangle(7, -7)
 
+    def test_neg_height(self):
+        with self.assertRaisesRegex(ValueError, "height must be > 0"):
+            Rectangle(1, 0)
+
 class TestValidationAttributeX(unittest.TestCase):
     """ Test the validation of parameter of a Rectangle """
     
@@ -195,6 +199,10 @@ class TestValidationAttributeX(unittest.TestCase):
     def test_neg_x(self):
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Rectangle(7, 3, -7)
+
+    def test_neg_height(self):
+        with self.assertRaisesRegex(ValueError, "x must be >= 0"):
+            Rectangle(1, 2, -3)
 
 class TestValidationAttributeY(unittest.TestCase):
     """ Test the validation of parameter of a Rectangle """
