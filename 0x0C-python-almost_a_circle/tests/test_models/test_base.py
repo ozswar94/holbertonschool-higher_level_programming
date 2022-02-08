@@ -120,6 +120,17 @@ class Test_Base_to_json_string(unittest.TestCase):
 class Test_Base_save_to_file(unittest.TestCase):
     """Test cases for save_to_file static method."""
 
+    def tearDown(self):
+        Base._Base__nb_objects = 0
+        try:
+            os.remove("Rectangle.json")
+        except:
+            pass
+        try:
+            os.remove("Square.json")
+        except:
+            pass
+
     def test_save_to_file_basic_rectangle(self):
         r = Rectangle(2, 4, 1, 2, 42)
         Rectangle.save_to_file([r])
