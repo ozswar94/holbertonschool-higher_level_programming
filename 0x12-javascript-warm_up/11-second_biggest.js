@@ -1,13 +1,10 @@
 #!/usr/bin/node
 
 if (process.argv.length <= 3) {
-  console.log('0');
+  console.log(0);
 } else {
-  const tab = [];
-  process.argv.forEach(function (items) {
-    if (Number(items)) { tab.push(Number(items)); }
-  });
+  const array = process.argv.slice(2).map(Number);
 
-  tab.sort();
-  console.log(tab[tab.length - 2]);
+  array.splice(array.indexOf(Math.max.apply(null, array)), 1);
+  console.log(Math.max.apply(null, array));
 }
