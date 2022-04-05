@@ -6,13 +6,13 @@ class Square extends Rectangle {
     super(size, size);
   }
 
-  charPrint (c){
-    if (!c){
+  charPrint (c) {
+    if (!c) {
       super.print();
       return;
     }
     for (let i = 0; i < this.height; i++) {
-      console.log(c.repeat(this.height))
+      console.log(c.repeat(this.height));
     }
   }
 }
