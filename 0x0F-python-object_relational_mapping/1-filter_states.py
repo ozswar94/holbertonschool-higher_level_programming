@@ -20,7 +20,9 @@ if __name__ == '__main__':
         db=sys.argv[3]
         )
     curs = db.cursor()
-    curs.execute("SELECT * FROM states WHERE name REGEXP '^[N].*'")
+    curs.execute(
+        "SELECT * FROM states WHERE name REGEXP '^[N].*' ORDER BY id"
+        )
     for row in curs.fetchall():
         print(row)
     curs.close()
