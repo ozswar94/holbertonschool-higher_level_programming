@@ -14,5 +14,5 @@ class State(Base):
         name (string): name of filed
     """
     __tablename__ = 'states'
-    id = Column('id', Integer, autoincrement=True, primary_key=True)
-    name = Column('name', String(128), nullable=False)
+    id = Column(Integer, autoincrement=True, primary_key=True, nullable=False)
+    name = Column(String(128), nullable=False)
