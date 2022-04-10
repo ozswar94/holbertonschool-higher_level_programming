@@ -21,7 +21,9 @@ if __name__ == '__main__':
         db=sys.argv[3]
         )
     curs = db.cursor()
-    curs.execute("SELECT * FROM states WHERE name='{}' ORDER BY id".format(sys.argv[4]))
+    curs.execute("""
+    SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id
+    """.format(sys.argv[4]))
     for row in curs.fetchall():
         print(row)
     curs.close()
