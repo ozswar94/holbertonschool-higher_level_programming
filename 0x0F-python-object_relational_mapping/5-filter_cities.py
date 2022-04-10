@@ -7,6 +7,7 @@ Arguments:
     mysql username sys.argv[1]
     mysql password sys.argv[2]
     database name sys.argv[3]
+    state name sys.argv[4]
 """
 
 import sys
@@ -29,11 +30,9 @@ if __name__ == '__main__':
         ORDER BY cities.id
         """, {'name_state': sys.argv[4]}
         )
-    list_result = list(curs.fetchall())
-    for row in list_result:
-        if list_result[-1] != row:
-            print(row[0], end=', ')
-        else:
-            print(row[0])
+    rows = curs.fetchall()
+    for i in range(len(rows)):
+        print(rows[i][0], end=", " if i + 1 < len(rows) else "")
+    print("")
     curs.close()
     db.close()
