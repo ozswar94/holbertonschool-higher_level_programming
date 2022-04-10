@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-lists all state from the database hbtn_0e_0_usa using ORM
+lists the first state from the database hbtn_0e_0_usa using ORM
 
 Arguments:
     mysql username sys.argv[1]
@@ -23,6 +23,7 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    state = session.query(State).order_by(State.id).all()
-    print("{}: {}".format(state[0].id, state[0].name))
+    for state in session.query(State).order_by(State.id).all():
+        if state.id == 1:
+            print("{}: {}".format(state.id, state.name))
     session.close()
