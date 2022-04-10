@@ -21,7 +21,7 @@ if __name__ == '__main__':
         )
     curs = db.cursor()
     curs.execute(
-        "SELECT * FROM states WHERE name REGEXP '^[N].*' ORDER BY id"
+        "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id"
         )
     for row in curs.fetchall():
         print(row)
