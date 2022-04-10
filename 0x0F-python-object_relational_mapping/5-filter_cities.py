@@ -23,8 +23,9 @@ if __name__ == '__main__':
     curs = db.cursor()
     curs.execute(
         """
-        SELECT cities.name FROM cities, states
-        WHERE states.name=%(name_state)s AND states.id=cities.state_id
+        SELECT cities.name
+        FROM cities INNER JOIN states
+        ON cities.state_id = states.id WHERE states.name = %(name_state)s
         ORDER BY cities.id ASC
         """, {'name_state': sys.argv[4]}
         )
