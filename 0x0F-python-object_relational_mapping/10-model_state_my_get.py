@@ -6,6 +6,7 @@ Arguments:
     mysql username sys.argv[1]
     mysql password sys.argv[2]
     database name sys.argv[3]
+    name of state sys.argv[4]
 """
 
 import sys
@@ -23,7 +24,9 @@ if __name__ == '__main__':
     Base.metadata.create_all(engine)
 
     session = Session(engine)
-    for state in session.query(State).order_by(State.id).all():
-        if 'a' in state.name:
-            print("{}: {}".format(state.id, state.name))
+    state = session.query(State).filter(State.name == sys.argv[4]).first()
+    if state:
+        print(state.id)
+    else:
+        print("Not found")
     session.close()
