@@ -23,7 +23,10 @@ if __name__ == '__main__':
     curs = db.cursor()
     curs.execute(
         """
-        SELECT * FROM cities ORDER BY id ASC
+        SELECT cities.id, cities.name, states.name
+        FROM cities, states
+        WHERE states.id = cities.state_id
+        ORDER BY id ASC
         """
         )
     for row in curs.fetchall():
