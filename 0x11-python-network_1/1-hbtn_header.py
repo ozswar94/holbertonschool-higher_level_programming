@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" send a request of websever """
+""" get a request of websever """
 import sys
 import urllib.request
 
