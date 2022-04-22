@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" script GET a webpage """
 import urllib.request
 
 
