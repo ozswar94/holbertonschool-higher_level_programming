@@ -4,10 +4,9 @@ import sys
 from urllib import request, parse
 
 
-url = sys.argv[1]
-email = sys.argv[2]
-
 if __name__ == '__main__':
+    url = sys.argv[1]
+    email = sys.argv[2]
     value = {'email': email}
     value = parse.urlencode(value).encode('utf-8')
     req = request.Request(url, value)
