@@ -6,11 +6,11 @@ import requests
 
 if __name__ == '__main__':
     if len(sys.argv) == 1:
-        letter = ""
+        let = ""
     else:
-        l = sys.argv[1]
+        let = sys.argv[1]
     rep = requests.post('http://0.0.0.0:5000/search_user',
-                        data={'q': l})
+                        data={'q': let})
     rep = rep.json()
     if rep == {}:
         print("No result")
