@@ -3,6 +3,7 @@
 import sys
 from urllib import request, parse
 
+
 url = sys.argv[1]
 email = sys.argv[2]
 
