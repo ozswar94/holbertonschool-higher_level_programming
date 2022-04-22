@@ -5,8 +5,14 @@ import requests
 
 
 if __name__ == '__main__':
+    if len(sys.argv) == 1:
+        letter = ""
+    else:
+        l = sys.argv[1]
     rep = requests.post('http://0.0.0.0:5000/search_user',
-                        data={'q': sys.argv[1]})
+                        data={'q': l})
     rep = rep.json()
-    for key, value in rep.items():
-        print('[{}] {}'.format(key, value))
+    if rep == {}:
+        print("No result")
+    else:
+        print('[{}] {}'.format(rep.get('id'), rep.get('name')))
