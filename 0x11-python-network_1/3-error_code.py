@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# manage error
+""" manage error """
 import sys
 from urllib import request, error
 
